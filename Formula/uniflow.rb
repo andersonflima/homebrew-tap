@@ -14,9 +14,9 @@ class Uniflow < Formula
   # credencial nenhuma, e verifica pelo sha256. O repositorio de codigo segue
   # privado (historico, issues, testes, bench); publico e apenas o que o usuario
   # instalado ja teria no disco de qualquer forma.
-  url "https://github.com/andersonflima/homebrew-tap/releases/download/uniflow-0.58.0/uniflow-0.58.0.tar.gz"
-  sha256 "6f2fb52215eac23c15d4a7a722a7c15dd5a8f652b76db7c113ad537a4f91ecf0"
-  version "0.58.0"
+  url "https://github.com/andersonflima/homebrew-tap/releases/download/uniflow-0.59.0/uniflow-0.59.0.tar.gz"
+  sha256 "a853a60f1ca641261fd0920318588a7f57c96b2d00b026491c779997bc01c493"
+  version "0.59.0"
 
   depends_on "node"
 
