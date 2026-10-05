@@ -1,6 +1,6 @@
 cask "animus" do
-  version "0.1.0"
-  sha256 "7b315103093ca791f19e31bdcbf33c5271a97a68cb168f76e9ede8c7405ea29d"
+  version "0.1.1"
+  sha256 "48a430548bc463e3f21e0339550db5715196c543da2692c00249a709a828aee6"
 
   url "https://github.com/andersonflima/homebrew-tap/releases/download/animus-#{version}/Animus-#{version}-arm64.zip"
   name "Animus"
@@ -11,10 +11,4 @@ cask "animus" do
   depends_on macos: :sonoma
 
   app "Animus.app"
-
-  caveats <<~EOS
-    Esta versão é assinada com Developer ID, mas ainda não é notarizada.
-    Se o macOS bloquear a abertura, autorize o Animus em Ajustes do Sistema >
-    Privacidade e Segurança após conferir a origem do download.
-  EOS
 end
