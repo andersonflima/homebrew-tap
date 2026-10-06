@@ -1,6 +1,6 @@
 cask "animus" do
-  version "0.1.10"
-  sha256 "8dc261c2c22617f454ef10320cd392b261c2e08a8416189e136569b45161e28c"
+  version "0.1.11"
+  sha256 "6ad853027a551b8b8832e32ecd3c1adfc82ba3e69b0385616678990500018dbc"
 
   url "https://github.com/andersonflima/homebrew-tap/releases/download/animus-#{version}/Animus-#{version}-arm64.zip"
   name "Animus"
