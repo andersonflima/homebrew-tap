@@ -38,3 +38,16 @@ Segurança após conferir a origem do download.
 
 Na primeira execução, configure sua conta e autorize os acessos necessários
 no painel de permissões do Animus. O pacote não inclui dados de usuário ou vault.
+
+## crow-skills
+
+Skills de agente versionadas, com instalador para vários agentes (Codex, Claude, Gemini…).
+O código vive em repositório privado e o pacote npm é restrito; aqui vai o tarball de release
+(sem credencial, verificado por sha256), então funciona em máquina sem token do npm:
+
+```sh
+brew tap andersonflima/tap
+brew install crow-skills
+crow-skills --version
+crow-skills list
+```
