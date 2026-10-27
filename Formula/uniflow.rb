@@ -14,14 +14,14 @@ class Uniflow < Formula
   # credencial nenhuma, e verifica pelo sha256. O repositorio de codigo segue
   # privado (historico, issues, testes, bench); publico e apenas o que o usuario
   # instalado ja teria no disco de qualquer forma.
-  url "https://github.com/andersonflima/homebrew-tap/releases/download/uniflow-0.65.1/uniflow-0.65.1.tar.gz"
-  sha256 "49a49f1d5ec71caadc18783d00b9bf8942093a830a08f1e66b4d08900252e095"
-  version "0.65.1"
+  url "https://github.com/andersonflima/homebrew-tap/releases/download/uniflow-0.66.0/uniflow-0.66.0.tar.gz"
+  sha256 "936c79aadb3d78438b909360172addc1e15f53bcc92b2b33647561addf6520eb"
+  version "0.66.0"
 
   depends_on "node"
 
   def install
-    libexec.install "package.json", "README.md", "src", "vendor", "skills"
+    libexec.install "package.json", "README.md", "src", "vendor"
     (bin/"uniflow").write <<~SH
       #!/bin/sh
       exec "#{Formula["node"].opt_bin}/node" "#{libexec}/src/cli.mjs" "$@"
