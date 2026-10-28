@@ -5,9 +5,9 @@ class CrowSkills < Formula
   # repositorio PRIVADO e o sandbox do Homebrew nao autentica git. O brew baixa este
   # tarball com curl, sem credencial, e confere o sha256. Gerado por `npm pack` do repo
   # de codigo (mesmo conteudo do pacote npm restrito).
-  url "https://github.com/andersonflima/homebrew-tap/releases/download/crow-skills-0.10.1/crow-skills-0.10.1.tar.gz"
-  sha256 "c5d1c36e82d18e3f29699501a6c606c9bcea9a59ad3c0a232229dda26917c134"
-  version "0.10.1"
+  url "https://github.com/andersonflima/homebrew-tap/releases/download/crow-skills-0.11.0/crow-skills-0.11.0.tar.gz"
+  sha256 "301c4356fc2fc62af327518824086feed148e0a766e09cd39918a63065bf4e4d"
+  version "0.11.0"
 
   depends_on "node"
   depends_on "python@3.13"
