@@ -3,8 +3,8 @@ cask "crow-term" do
   arch arm: "arm64", intel: "x86_64"
 
   version "0.1.0-alpha.2"
-  sha256 arm:   "e614861fa00409be77a3a9e266557353a6390a579bc47479fc762792d9011ea2",
-         intel: "49745dbb88c3a0e7565e331769c034afdc882303ed17686e388f2ab364392019"
+  sha256 arm:   "6b405bcff0fee3bc98247d55712546ebce7c9461895016627350405ae28d4d1f",
+         intel: "573b319d9da149b856f3c4fbdc7ba30a5d5eb609005adeb654edfa19f913bf69"
 
   url "https://github.com/andersonflima/crow-term/releases/download/v#{version}/crow-term-#{version}-macos-#{arch}.app.zip"
   name "Crow Term"
@@ -20,10 +20,4 @@ cask "crow-term" do
     "~/Library/Application Support/dev.crow.crow-term",
     "~/Library/Caches/dev.crow.crow-term",
   ]
-
-  caveats <<~EOS
-    This build of Crow Term is not notarized by Apple (it is only ad-hoc
-    signed). If macOS refuses to open it, remove the download quarantine:
-      xattr -dr com.apple.quarantine "#{appdir}/Crow Term.app"
-  EOS
 end
