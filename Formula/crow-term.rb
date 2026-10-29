@@ -6,23 +6,23 @@ class CrowTerm < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.2/crow-term-0.1.0-alpha.2-macos-arm64.tar.gz"
-      sha256 "5ce78e99d8b929a070ad8ed089e617301d8040aef49b3916f114497e6ba44516"
+      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.3/crow-term-0.1.0-alpha.3-macos-arm64.tar.gz"
+      sha256 "83d607af26c4684fceba16f01f636fb99bf5868954c309de63b2e6d508295017"
     end
     on_intel do
-      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.2/crow-term-0.1.0-alpha.2-macos-x86_64.tar.gz"
-      sha256 "d407756643d976654bd80bc25483af502212a950385fe4cb395b28c4e8075d84"
+      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.3/crow-term-0.1.0-alpha.3-macos-x86_64.tar.gz"
+      sha256 "9667e99af3b086741adea65d7113682a16d6009f0017ac13bcf32b5aad400b53"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.2/crow-term-0.1.0-alpha.2-linux-arm64.tar.gz"
-      sha256 "a089d40c54409a6d1d02abacf24ad31611318a9eb78bdbc262186cafd0878209"
+      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.3/crow-term-0.1.0-alpha.3-linux-arm64.tar.gz"
+      sha256 "2a648dce4f503fc99cf21d75f8516d0de195214fbe26d6304220c4968f69af4c"
     end
     on_intel do
-      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.2/crow-term-0.1.0-alpha.2-linux-x86_64.tar.gz"
-      sha256 "29a1de83dd70298cd908a3581c34d33640b76e246cdc882b0dde1b4c7d2866ae"
+      url "https://github.com/andersonflima/crow-term/releases/download/v0.1.0-alpha.3/crow-term-0.1.0-alpha.3-linux-x86_64.tar.gz"
+      sha256 "9e76e3f4aac4e36fb95bd8b741ac194d916b02f6dda51b32b51ae6e6d903e25d"
     end
   end
 
