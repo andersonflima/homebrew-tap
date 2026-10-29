@@ -2,9 +2,9 @@
 cask "crow-term" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.1.0-alpha.2"
-  sha256 arm:   "6b405bcff0fee3bc98247d55712546ebce7c9461895016627350405ae28d4d1f",
-         intel: "573b319d9da149b856f3c4fbdc7ba30a5d5eb609005adeb654edfa19f913bf69"
+  version "0.1.0-alpha.3"
+  sha256 arm:   "9035173bcbc1dcef5864aaf60cc68985677a62b729d4178abb3a5cfd9b4a5949",
+         intel: "276bf221fad06873bb8c0a4063b1104508186a6a70573b12d5d301f21dc4227c"
 
   url "https://github.com/andersonflima/crow-term/releases/download/v#{version}/crow-term-#{version}-macos-#{arch}.app.zip"
   name "Crow Term"
