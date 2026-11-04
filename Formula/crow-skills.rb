@@ -22,6 +22,22 @@ class CrowSkills < Formula
     chmod 0755, bin/"crow-skills"
   end
 
+  def caveats
+    <<~EOS
+      CONGELADO na 0.16.1. A distribuicao do crow-skills passou a ser o pacote
+      privado no npm, e esta formula nao recebe versoes novas: um
+      `crow-skills upgrade` aqui responde "ja na versao mais nova" mesmo havendo
+      versao nova publicada.
+
+      Para trocar:
+        brew uninstall crow-skills
+        npm install -g @andespindola/crow-skills
+
+      O pacote e privado; a instalacao exige ~/.npmrc autenticado no escopo
+      @andespindola.
+    EOS
+  end
+
   test do
     assert_match "crow-skills", shell_output("#{bin}/crow-skills --help")
   end
