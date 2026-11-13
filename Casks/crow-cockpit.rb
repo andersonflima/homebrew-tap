@@ -12,8 +12,8 @@ cask "crow-cockpit" do
 
   app "Crow Cockpit.app"
 
-  # Auto-update over Homebrew: install a per-user LaunchAgent (only if absent)
-  # that refreshes the tap and runs `brew upgrade --cask crow-cockpit`.
+  # Auto-update over Homebrew: install (if absent) + always (re)load a per-user
+  # LaunchAgent that refreshes the tap and runs `brew upgrade --cask crow-cockpit`.
   postflight do
     require "fileutils"
     home   = Dir.home
@@ -64,19 +64,20 @@ cask "crow-cockpit" do
         </dict>
         </plist>
       PL
-      system_command "/bin/launchctl", args: ["bootstrap", "gui/#{Process.uid}", plist], print_stderr: false
     end
+    # Idempotent (re)load so it survives upgrades (plist kept, agent unloaded).
+    system_command "/bin/launchctl", args: ["bootout", "gui/#{Process.uid}/#{label}"], print_stderr: false
+    system_command "/bin/launchctl", args: ["bootstrap", "gui/#{Process.uid}", plist], print_stderr: false
   end
 
-  uninstall launchctl: "com.andersonflima.crow-cockpit.autoupdate",
-            delete:    [
-              "~/Library/LaunchAgents/com.andersonflima.crow-cockpit.autoupdate.plist",
-              "~/.local/bin/crow-cockpit-autoupdate",
-            ]
+  # Unload the agent on uninstall (no sudo). Files are trashed by `--zap`.
+  uninstall launchctl: "com.andersonflima.crow-cockpit.autoupdate"
 
   zap trash: [
+    "~/Library/LaunchAgents/com.andersonflima.crow-cockpit.autoupdate.plist",
+    "~/.local/bin/crow-cockpit-autoupdate",
+    "~/.local/state/crow-cockpit",
     "~/Library/Application Support/dev.crow.cockpit",
     "~/Library/Caches/dev.crow.cockpit",
-    "~/.local/state/crow-cockpit",
   ]
 end
