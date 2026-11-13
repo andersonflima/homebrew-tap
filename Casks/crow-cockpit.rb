@@ -66,8 +66,8 @@ cask "crow-cockpit" do
       PL
     end
     # Idempotent (re)load so it survives upgrades (plist kept, agent unloaded).
-    system_command "/bin/launchctl", args: ["bootout", "gui/#{Process.uid}/#{label}"], print_stderr: false
-    system_command "/bin/launchctl", args: ["bootstrap", "gui/#{Process.uid}", plist], print_stderr: false
+    system_command "/bin/launchctl", args: ["bootout", "gui/#{Process.uid}/#{label}"], must_succeed: false, print_stderr: false
+    system_command "/bin/launchctl", args: ["bootstrap", "gui/#{Process.uid}", plist], must_succeed: false, print_stderr: false
   end
 
   # Unload the agent on uninstall (no sudo). Files are trashed by `--zap`.
