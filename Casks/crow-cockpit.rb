@@ -1,6 +1,6 @@
 cask "crow-cockpit" do
-  version "0.2.34"
-  sha256 "c5b38194629c849b67987e0f9683635836defc868fcf2bb6beeebbaae1994ec1"
+  version "0.2.35"
+  sha256 "3f0b301f0243c3b4b53f876acdafbd06efd42f510037843ea1059dd7241a4177"
 
   url "https://github.com/andersonflima/homebrew-tap/releases/download/crow-cockpit-#{version}/Crow-Cockpit-#{version}-arm64.dmg"
   name "Crow Cockpit"
