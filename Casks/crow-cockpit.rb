@@ -1,6 +1,6 @@
 cask "crow-cockpit" do
-  version "0.2.125"
-  sha256 "eb59f6a8225bcd557a01eefd9f60640b163466b7a9b1154f57ce395f24ed8ab2"
+  version "0.2.126"
+  sha256 "23c8701b8d4aada60949a9c3b158524a0e333fca2c12864f3164f30340184c40"
 
   url "https://github.com/andersonflima/homebrew-tap/releases/download/crow-cockpit-#{version}/Crow-Cockpit-#{version}-arm64.dmg"
   name "Crow Cockpit"
@@ -9,6 +9,8 @@ cask "crow-cockpit" do
 
   depends_on macos: :big_sur
   depends_on arch: :arm64
+  depends_on formula: "node"
+  depends_on formula: "python@3.15"
 
   app "Crow Cockpit.app"
 
